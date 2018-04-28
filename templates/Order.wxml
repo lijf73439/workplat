@@ -1,0 +1,31 @@
+<wxs module="filters" src="../common/filters.wxs"></wxs>
+<template name="order">
+  <view class='order'>
+    <view class='top'>
+      <image class='shop-icon' src="../../icons/icons/touxiang.png"></image>
+      <text class='company-name'>真枪实弹</text>
+      <text class='status'>类别一</text>
+    </view>
+    <view class='main' bindtap='goDetail' data-no=''>
+      <view class='fisrt'>
+        <image src='../../icons/icons/head-2.jpg' class='list-img'></image>
+        <text>家里洗手间瓷砖坏了，需要修补，吧啦吧啦吧啦吧啦吧啦</text>
+      </view>
+      <view class='second'>
+        <text>2018-03-12 13：12</text>
+        <view>
+          <image src='../../icons/icons/dingwei_orange.png' class='dingwei_orange'></image>
+          <text>北京朝阳</text>
+        </view>
+      </view>
+    </view>
+    <view class='yufei'>
+      <text>预估费用：</text>
+      <text class='price'><text class='price-tag'>¥</text>1232</text>
+    </view>
+    <view class='bottom'>
+      <view bindtap='anthoerOrder' class='wuliu-track btn'>抢单</view>
+      <view bindtap='logisticsTrack' class='wuliu-track btn'>跟踪</view>
+    </view>
+  </view>
+</template>

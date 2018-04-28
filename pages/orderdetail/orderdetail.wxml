@@ -1,0 +1,60 @@
+<!--pages/orderdetail/orderdetail.wxml-->
+<wxs module="filters" src="../../common/filters.wxs"></wxs>
+
+<view class='detail-box'>
+  <view class='detail-tit'>
+    <view class='text'>
+    <image src='../../icons/icons/touxiang.png'></image>
+      <text>真枪实弹</text>
+    </view>
+    <image class='image' src='../../icons/icons/yunshuzhong@2x.png'></image>
+  </view>
+  <view class='detail-num pd30'>
+    <view class='detail-item'>
+      <text class='detail-name'>发布主题：</text>
+      <text class='detail-number'>家里洗手间瓷砖坏了</text>
+    </view>
+    <view class='detail-item' style='margin-top:20rpx;'>
+      <text class='detail-name'>发布时间：</text>
+      <text class='detail-number'>2018-09-12 13:22</text>
+    </view>
+    <view class='border-bottom mgt30'></view>
+    <view class='detail-item' style='margin-top:30rpx;'>家里洗手间瓷砖坏了，需要修补，吧啦吧啦吧啦吧啦吧啦家里洗手间瓷砖坏了，需要修补，吧啦吧啦吧啦吧啦吧啦</view>
+  </view>
+  <view class='detail-list-box pd30 mgtb20'>
+    <view class='detail-list'>
+      <view class='list-l-txt'><image src='../../icons/icons/dingwei_orange.png' class='dingwei_orange'></image>发布位置</view>
+      <view class='list-r-box'>
+        <text class='list-r-txt'>北京朝阳</text>
+        <!-- <image class='image' src='../../icons/icons/dianhua-red.png'></image> -->
+      </view>
+    </view>
+    <view class='border-bottom mgt30'></view>
+    <view class='detail-list mgt30'>
+      <view class='list-l-txt'>类别</view>
+      <text class='list-r-txt'>类别一</text>
+    </view>
+    <view class='border-bottom mgt30'></view>
+    <view class='detail-list mgt30'>
+      <view class='list-l-txt'>截止日期</view>
+      <text class='list-r-txt'>2018-09-12</text>
+    </view>
+    <view class='border-bottom mgt30'></view>
+    <view class='detail-list mgt30'>
+      <view class='list-l-txt'>费用</view>
+      <view>
+        <text class='gray'>￥</text>
+        <text class='gray-price'>{{filters.numFilter(2.12,0)}}</text>
+        <text class='gray-zero'>{{filters.numFilter(2.12,1)}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='detail-list-box pd30 mgtb20'>
+    <image class='pro-img' src='../../icons/icons/chaoren_android.jpg'></image>
+    <image class='pro-img' src='../../icons/icons/chaoren_android.jpg'></image>
+    <image class='pro-img' src='../../icons/icons/chaoren_android.jpg'></image>
+  </view>
+  <view class='addbutton-box'>
+    <view class="add-button">抢单</view>
+  </view>
+</view>

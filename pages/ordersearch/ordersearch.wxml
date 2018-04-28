@@ -1,0 +1,41 @@
+<!--pages/ordersearch/ordersearch.wxml-->
+<import src="../../templates/OrderSearchBar.wxml" />
+<import src="../../components/Tips.wxml" />
+<import src="../../templates/Order.wxml" />
+
+
+<view class='order-search'>
+    <template is="tips" data="{{isShow,title}}" />
+     <template is="order-search-bar" data="{{keywords:keywords}}"/>
+     <!-- <view class='searc-result' wx:if="{{historyShow}}">
+        <view class='result-list'>
+          <view class='result-item'>
+              <text>历史记录</text>
+              <text bindtap='clear'>清除</text>       
+            </view>
+            <view data-item="{{item}}" bindtap='setKeyWord' class='result-item' wx:for="{{history}}">
+            {{item}}           
+            </view>
+        </view>
+     </view> -->
+     <view>
+      <view class='class-list'>
+        <view class='list-item active'>全部</view>
+        <view class='list-item'>种类一</view>
+        <view class='list-item'>种类二</view>
+        <view class='list-item'>种类三</view>
+        <view class='list-item'>种类四</view>
+        <view class='list-item'>种类五</view>
+        <view class='list-item'>种类六</view>
+        <view class='list-item last'>种类七</view>
+      </view>
+     </view>
+     <scroll-view scroll-y style="height:{{windowHeight-50+'px'}}" bindscrolltolower='loadMore' bindscrolltoupper="refresh">
+      <template is="order"  data="{{order:item}}" wx:for="{{orders}}"/>
+     </scroll-view>
+      <view class='no-route' wx:if="{{orders.length==0 && !historyShow}}">
+        <image src='../../icons/icons/noRoute.png'></image>
+        <view class='no-txt-b'>很抱歉!</view>
+        <view class='no-txt-s'>查不到该内容</view>
+     </view> 
+</view>

@@ -1,0 +1,95 @@
+<!--pages/orderdetail/orderdetail.wxml-->
+<wxs module="filters" src="../../common/filters.wxs"></wxs>
+
+<view class='detail-box'>
+  <view class='detail-tit'>
+    <view class='text'>
+      <image src='../../icons/icons/touxiang.png'></image>
+      <text>优秀的小匠人</text>
+    </view>
+    <image class='image' src='../../icons/icons/yunshuzhong@2x.png'></image>
+  </view>
+  <view class='detail-num pd30'>
+    <view class='detail-item'>
+      <text class='detail-name'>简介：</text>
+      <text class='detail-number'>男  38岁</text>
+    </view>
+    <!-- <view class='border-bottom mgt30'></view> -->
+    <view class='detail-item eval-box'>
+      <view class='eval-item'>
+        <text class='detail-number'>128</text>
+        <text class='detail-name'>成交数</text>
+      </view>
+      <view class='eval-item'>
+        <text class='detail-number'>98%</text>
+        <text class='detail-name'>好评率</text>
+      </view>
+      <view class='eval-item'>
+        <text class='detail-number'>128</text>
+        <text class='detail-name'>评价数</text>
+      </view>
+      <view class='eval-item'>
+        <text class='detail-number'>28</text>
+        <text class='detail-name'>投诉数</text>
+      </view>
+      <view class='eval-item'>
+        <button>发消息</button>
+      </view>
+    </view>
+    <!-- <view class='border-bottom mgt30'></view> -->
+    <view class='detail-list mgt30'>
+      <view class='list-l-txt'>实名认证</view>
+      <text class='list-r-txt'>已认证</text>
+    </view>
+    <view class='border-bottom mgt30'></view>
+    <view class='detail-item' style='margin-top:30rpx;'>
+      <view>工种：</view>
+      <view class='class-list'>
+        <view class='list-item'>种类一</view>
+        <view class='list-item'>种类二</view>
+        <view class='list-item'>种类三</view>
+      </view>
+    </view>
+    <view class='border-bottom'></view>
+    <view class='detail-item' style='margin-top:30rpx;'>
+      <view>个人信息：</view>
+      <view class='class-list'>个人信息个人信息个人信息个人信息个人信息个人信息个人信息个人信息个人信息个人信息个人信息个人信息个人信息个人信息</view>
+    </view>
+    <view class='border-bottom mgt30'></view>
+    <view class='list-box' style='margin-top:30rpx;'>
+      <view>成功案例：</view>
+      <view class='list-content'>
+        <view class='order'>
+          <view class='main' bindtap='goDetail' data-no=''>
+            <view class='fisrt'>
+              <image src='../../icons/icons/head-2.jpg' class='list-img'></image>
+              <text>扒拉扒拉扒拉扒拉扒拉扒拉扒拉扒拉扒拉扒拉扒拉</text>
+            </view>
+            <view class='second'>
+              <text>2018-03-12 13：12</text>
+              <view>
+                <image src='../../icons/icons/love_select.png' class='dingwei_orange'></image>
+                <text>5</text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='order'>
+          <view class='main' bindtap='goDetail' data-no=''>
+            <view class='fisrt'>
+              <image src='../../icons/icons/head-2.jpg' class='list-img'></image>
+              <text>扒拉扒拉扒拉扒拉扒拉扒拉扒拉扒拉扒拉扒拉扒拉</text>
+            </view>
+            <view class='second'>
+              <text>2018-03-12 13：12</text>
+              <view>
+                <image src='../../icons/icons/love_select.png' class='dingwei_orange'></image>
+                <text>5</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

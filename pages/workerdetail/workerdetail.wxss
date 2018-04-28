@@ -1,0 +1,262 @@
+/* pages/orderdetail/orderdetail.wxss */
+.detail-box{
+  width: 100%;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+.detail-tit{
+  position: relative;
+  width: 100%;
+  height: 160rpx;
+  line-height: 160rpx;
+}
+.detail-tit .text{
+  position: relative;
+  font-size: 32rpx;
+  color: #fff;
+  padding-left: 30rpx;
+  z-index: 1
+}
+.detail-tit .text image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+  vertical-align: middle;
+}
+.detail-tit .image{
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  z-index: 0;
+  height: 160rpx;
+}
+
+.mgtb20{
+  margin: 20rpx 0;
+}
+.detail-item{
+  font-size: 28rpx;
+  color: #333;
+}
+.detail-item text,.address-user text,.detail-list .list-l-txt{
+  font-size: 28rpx;
+  color: #333;
+}
+.dingwei_orange{
+  width: 24rpx;
+  height: 32rpx;
+  margin-right: 15rpx;
+}
+.mgt30{
+  margin-top: 30rpx;
+}
+.mgt24{
+  margin-top: 24rpx;
+}
+.pd30{
+  padding:30rpx;
+  background-color: #fff;
+}
+.address-box{
+  margin-top: 20rpx;
+}
+.address-item{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.icon-qi{
+  width:33rpx;
+  height:38rpx;
+  vertical-align: middle;
+}
+.address-detail{
+  margin-left:18rpx; 
+}
+.address-user{
+  width: 100%;
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content:space-between;
+}
+.address-info,.list-r-txt{
+  color: #666;
+  font-size: 28rpx;
+}
+.border-bottom{
+  width: 150%;
+  position: relative;
+  height: 1px;
+  background-color: #d7d7d7;
+}
+.detail-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.symbol{
+  font-size: 28rpx;
+  color:#ff8400;
+}
+.gray{
+  font-size: 28rpx;
+  color:#666;
+}
+.price{
+  font-size: 36rpx;
+   color:#ff8400;
+}
+.gray-price{
+  font-size: 36rpx;
+   color:#666;
+}
+.gray-zero{
+    font-size: 24rpx;
+   color:#666;
+}
+.price-zero{
+  font-size: 24rpx;
+   color:#ff8400;
+}
+.detail-list-box,.address-box{
+  overflow: hidden;
+}
+
+.detail-list .image{
+  position: relative;
+  top:6rpx;
+  margin-left: 16rpx;
+  width: 32rpx;
+  height: 40rpx;
+}
+.detail-btn-box{
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+
+}
+.detail-btn{
+  width: 160rpx;
+  height: 60rpx;
+  margin-right: 30rpx;
+  line-height: 60rpx;
+  border: 1px solid #ff8400;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  color:#ff8400;
+  text-align: center;
+}
+.add-button{
+  width: 690rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  color: #fff;
+  background-color: #ff8400;
+  font-size: 36rpx;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 10rpx;
+}
+.addbutton-box{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  padding: 20rpx 0;
+  background-color: #fff;
+}
+.pro-img{
+  width: 100%;
+  
+}
+.eval-box{
+  margin-top:20rpx;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.eval-item button{
+  font-size: 28rpx;
+}
+.eval-item .detail-number{
+  display: block;
+  text-align: center;
+  color: #ff8400;
+}
+.class-list{
+  padding: 10rpx 30rpx;
+}
+.class-list .list-item{
+  text-align: center;
+  font-size: 28rpx;
+  display: inline-block;
+  width: 135rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border: 1px solid #ececec;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+.class-list .list-item.last{
+  margin-right: 0rpx;
+}
+.class-list .list-item.active{
+  background-color: #ff8400; 
+  color:#fff;
+  border-color: #ff8400;
+}
+.list-box{
+  font-size: 28rpx;
+  background: #fff;
+}
+.order{
+  font-size: 28rpx;
+  background: #fff;
+  border-bottom: 20rpx solid #fff;
+}
+.main{
+  background: #f8f8f8;
+   padding: 30rpx 30rpx;
+}
+.main .fisrt{
+   display: flex;
+   justify-content: space-between;
+}
+.main .fisrt .point text{
+  display: block;
+  font-size: 28rpx;
+}
+.main .fisrt .point .province{
+  color:#333;
+  font-size: 30rpx;
+  margin-bottom: 16rpx;
+}
+.main .fisrt .point .city{
+  color:#666;
+}
+.main .middle-tag image{
+  width:160rpx;
+  height:12rpx;
+}
+.main .second{
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+  font-size: 30rpx;
+  color:#666;
+  display: flex;
+  justify-content: space-between;
+}
+.dingwei_orange{
+  width: 24rpx;
+  height: 32rpx;
+  margin-right: 15rpx;
+}
+.list-img{
+  width: 100rpx;
+  height: 100rpx;
+  flex-shrink:0;
+  margin-right: 20rpx;
+}
+

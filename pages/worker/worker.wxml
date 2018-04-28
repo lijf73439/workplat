@@ -1,0 +1,72 @@
+
+<import src="../../components/Tips.wxml" />
+<import src="../../templates/workertemp.wxml" />
+
+
+<template is="tips" data="{{isShow,title}}" />
+<view class='index-box'>
+  <view class='index-hd'>
+    <image class='hd-bg' src='../../icons/icons/beijing.png'></image>
+    <view class='nav-position' bindtap='openLocaltion'>
+      <image class='nav-mark' src='../../icons/icons/dingwei.png'></image>
+      <text class='nav-address'>{{currentAddress}}</text>
+      <image class='nav-arrow' src='../../icons/icons/down-arrow.png'></image>
+    </view>
+
+    <view class='m-search' data-nav-url='/pages/workersearch/workersearch' bindtap='navToPath'>
+      <view class='search-bg'></view>
+      <view class='search-bg-box'>
+        <view class='search-mark-box'>
+          <image class='search-mark' src='../../icons/icons/sousuo.png'></image>
+        </view>
+        <text class='search-line'>输入用户名/位置</text>
+      </view>
+    </view>
+    <view class='swiper-box'>
+      <!-- <swiper class='m-swiper' indicator-dots="true" autoplay="false" interval="2000" duration="500">
+            <block wx:key="{{index}}" wx:for="{{bannerList}}" wx:for-index="idx" wx:for-item="banner">
+                <swiper-item>
+                  <image src='{{banner.url}}'></image>
+                </swiper-item>
+            </block>
+            </swiper> -->
+      <swiper class='m-swiper' indicator-dots="true" autoplay="false" interval="2000" duration="500">
+        <block>
+          <swiper-item>
+            <image src='../../icons/icons/chaoren_android.jpg'></image>
+          </swiper-item>
+          <swiper-item>
+            <image src='../../icons/icons/laosun_android.jpg'></image>
+          </swiper-item>
+          <swiper-item>
+            <image src='../../icons/icons/chaoren_android.jpg'></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class='swiper-footer'>
+      <image class='ft-img' src='../../icons/icons/swiper-footer.png'></image>
+    </view>
+    <view class='fill-color'></view>
+  </view>
+  <view class='index-bd' wx:if='{{isOpenLocaltion}}'>
+    <scroll-view scroll-x scroll-with-animation class='list-box'>
+      <view class='list-item active'>全部</view>
+      <view class='list-item'>种类一</view>
+      <view class='list-item'>种类二</view>
+      <view class='list-item'>种类三</view>
+      <view class='list-item'>种类四</view>
+      <view class='list-item'>种类五</view>
+      <view class='list-item'>种类六</view>
+      <view class='list-item'>种类七</view>
+    </scroll-view>
+    <scroll-view scroll-y style="height:{{windowHeight-100+'px'}}" bindscrolltolower='loadMore' bindscrolltoupper="refresh">
+      <template is="order"  data="{{order:item}}" wx:for="{{orders}}"/>
+    </scroll-view>
+  </view>
+  <view class='is-local-box' wx:if='{{!isOpenLocaltion}}'>
+    <image class='line-bus-mark' src='../../icons/icons/weidingweikongbaiy@2x.png'></image>
+    <view class='tis'>我们会为您推荐</view>
+    <button size='mini' class='local-btn' bindtap='openSetting'>开启定位</button>
+  </view>
+</view>
