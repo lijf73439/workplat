@@ -6,7 +6,7 @@ let configService = require('./service/config.service.js');
 Date.prototype.Format = function (fmt) {
   var o = {
     "M+": this.getMonth() + 1, //月份   
-    "d+": this.getDate(), //日   
+    "d+": this.getDate(), //日  
     "h+": this.getHours(), //小时   
     "m+": this.getMinutes(), //分   
     "s+": this.getSeconds(), //秒   
