@@ -1,0 +1,346 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.5.4",
+	"appid": "wxe003ee3448127663",
+	"projectname": "kxtx-miniprograme",
+	"svr": "",
+	"client": "",
+	"qcloudRoot": "",
+	"miniprogramRoot": "",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 5,
+			"list": [
+				{
+					"id": 0,
+					"name": "分类",
+					"pathName": "pages/categoryproducts/categoryproducts",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "支付成功",
+					"pathName": "pages/successpay/successpay",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "推荐",
+					"pathName": "pages/recommendproducts/recommendproducts",
+					"query": "id=59c47b35e77ebe166d1cfa65"
+				},
+				{
+					"id": 3,
+					"name": "产品",
+					"pathName": "pages/product/product",
+					"query": "id=59c47b35e77ebe166d1cfa65"
+				},
+				{
+					"id": -1,
+					"name": "购物车",
+					"pathName": "pages/cart/cart",
+					"query": "id=59c47b35e77ebe166d1cfa65"
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "分类-列表",
+					"pathName": "pages/category/category",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "结算",
+					"pathName": "pages/confirmorder/confirmorder",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/mine/mine",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "优惠券",
+					"pathName": "pages/minecoupons/minecoupons",
+					"query": ""
+				},
+				{
+					"id": 10,
+					"name": "限时抢",
+					"pathName": "pages/limittimebuy/limittimebuy",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订单详情",
+					"pathName": "pages/orderinfo/orderinfo",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "cakelist",
+					"pathName": "pages/cakelist/cakelist",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "货运圈首页",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "搜索",
+					"pathName": "pages/search/search",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "线路搜索",
+					"pathName": "pages/linesearch/linesearch",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "店铺详情",
+					"pathName": "pages/store/store",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "addDeliver",
+					"pathName": "pages/addDeliver/addDeliver",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "addDeliver",
+					"pathName": "pages/addReceipt/addReceipt",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "addDeliver",
+					"pathName": "pages/receiptPlace/receiptPlace",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/receiptPlace/receiptPlace",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/addDeliver/addDeliver",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/vip/vip",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/abountUS/abountUS",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/vip/vip",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/jionUS/jionUS",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/deliverPlace/deliverPlace",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/deliverPlace/deliverPlace",
+					"query": "source=delivery"
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/deliverPlace/deliverPlace",
+					"query": "source=delivery"
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/vip/vip",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/deliverPlace/deliverPlace",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/writeorder/writeorder",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/vip/vip",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/share/share",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "vip",
+					"pathName": "pages/vip/vip",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "deliverPlace",
+					"pathName": "pages/deliverPlace/deliverPlace",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "vip",
+					"pathName": "pages/vip/vip",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "vip",
+					"pathName": "pages/vip/vip",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/abountUS/abountUS",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/vip/vip",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/preference/preference",
+					"query": "hasSource=true&totalPrice=100"
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/preference/preference",
+					"query": "hasSource=true&totalPrice=100"
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/vip/vip",
+					"query": "hasSource=true&totalPrice=100"
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/preference/preference",
+					"query": "hasSource=true&totalPrice=100"
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/preference/preference",
+					"query": "hasSource=true&totalPrice=100&selectedCouponId=19"
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/orderlist/orderlist",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/orderlist/orderlist",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/knowUS/knowUS",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "abountUS",
+					"pathName": "pages/vip/vip",
+					"query": ""
+				}
+			]
+		}
+	}
+}

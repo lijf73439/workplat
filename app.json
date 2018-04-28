@@ -1,0 +1,91 @@
+{
+  "pages": [
+    "pages/writeorder/writeorder",
+    "pages/order/order",
+    "pages/search/search",
+    "pages/submitorderresult/submitorderresult",
+    "pages/minecoupons/minecoupons",
+    "pages/index/index",
+    "pages/linesearch/linesearch",
+    "pages/searchinfo/searchinfo",
+    "pages/store/store",
+    "pages/preference/preference",
+    "pages/invalidateCoupon/invalidateCoupon",
+    "pages/login/login",
+    "pages/orderinfo/orderinfo",
+    "pages/vip/vip",
+    "pages/registerText/registerText",
+    "pages/deliverPlace/deliverPlace",
+    "pages/abountUS/abountUS",
+    "pages/shouquanText/shouquanText",
+    "pages/addDeliver/addDeliver",
+    "pages/goodsinfo/goodsinfo",
+    "pages/somewords/somewords",
+    "pages/pay/pay",
+    "pages/orderlist/orderlist",
+    "pages/logisticstrack/logisticstrack",
+    "pages/jionUS/jionUS",
+    "pages/share/share",
+    "pages/ordersearch/ordersearch",
+    "pages/orderdetail/orderdetail",
+    "pages/knowUS/knowUS",
+    "pages/worker/worker",
+    "pages/public/public",
+    "pages/message/message",
+    "pages/workersearch/workersearch",
+    "pages/workerdetail/workerdetail",
+    "pages/vipdetails/vipdetails"
+    
+  ],
+  "window": {
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "black",
+    "backgroundColor": "#f9f9f9",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "用工平台",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#5f616c",
+    "selectedColor": "#ff8400",
+    "backgroundColor": "#fff",
+    "borderStyle": "#e6e6e6",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "招工",
+        "iconPath": "./icons/icons/shouye-weixuanzhong.png",
+        "selectedIconPath": "./icons/icons/shouye-xuanzhong.png"
+      },
+      {
+        "pagePath": "pages/worker/worker",
+        "text": "工人",
+        "iconPath": "./icons/icons/worker.png",
+        "selectedIconPath": "./icons/icons/worker-xuanzhong.png"
+      },
+      {
+        "pagePath": "pages/public/public",
+        "text": "发布",
+        "iconPath": "./icons/icons/public.png",
+        "selectedIconPath": "./icons/icons/public-xuanzhong.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "./icons/icons/dingdan-weixuanzhong.png",
+        "selectedIconPath": "./icons/icons/dingdan-xuanzhong.png"
+      },
+      {
+        "pagePath": "pages/vip/vip",
+        "text": "我的",
+        "iconPath": "./icons/icons/wode-weixuanzhong.png",
+        "selectedIconPath": "./icons/icons/wode-xuanzhong.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}
