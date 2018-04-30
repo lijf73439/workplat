@@ -1,14 +1,13 @@
 let utils = require("../utils/util.js");
-const url = 'https://test-mhyq.kxtx.cn/kxtx-mhyq';
+const url = 'http://47.98.53.174:8080';
 let formData;
 const apiPrefixList = {
   MHYQ: url,
-  MHYQMINIAPP: url + "/miniapp/",
-  SWKPAY: "https://test-swk-pay.kxtx.cn/webapp"
+  MHYQMINIAPP: url + "/"
 
 
 };
-const apiPrefix = url + '/miniapp/';
+const apiPrefix = url + '/';
 function qrstring(url, params) {
   let keys = Object.keys(params);
   let str = '';
@@ -21,23 +20,13 @@ function qrstring(url, params) {
   return str;
 
 }
-function service({ formType, apiPrefix, url, method = 'get', params = {}, data = {}, header = {
-  'content-type': 'application/json'
-}, fromH5 = true}) {
+function service({ formType, apiPrefix, url, method = 'get', params = {}, data = {}, header = {'content-type': 'application/json'}}) {
   return new Promise((reslove, reject) => {
     apiPrefix = apiPrefixList[apiPrefix] || apiPrefixList.MHYQMINIAPP;
     var urlData = apiPrefix + url + qrstring(url, params);
-    if (apiPrefix == 'https://test-swk-pay.kxtx.cn/webapp' && fromH5) {
-      urlData += '&fromH5=1';
-    }
-    // debugger;
-    // if (header["content-type"] =='x-www-form-urlencoded'){
-    //   data = utils.json2Form(data);
-    // }
     wx.request({
       url: urlData,
       header,
-      
       method,
       data,
       formData,
@@ -46,20 +35,8 @@ function service({ formType, apiPrefix, url, method = 'get', params = {}, data =
 
       },
       success: function (res) {
-        if (res.errMsg == "request:ok") {
-          if (res.data && res.data.data && utils.getType(res.data.data) == 'Object') {
-            reslove(res.data);
-          }
-          else if (res.data && res.data.data && res.data.data.includes("{")) {
-            res.data = {
-              ...res.data,
-              data: JSON.parse(res.data.data)
-            }
-            reslove(res.data);
-          }else{
-            reslove(res.data);
-          }
-       
+        if (res.errMsg == "success" || res.errMsg == "request:ok" ) {
+          reslove(res.data);
         } else {
           reject(res);
         }

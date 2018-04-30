@@ -2,6 +2,7 @@
 var config = require('../../config/config.js');
 var tips = require('../../components/tips.js');
 var app = getApp();
+let publicService = require("../../service/public.service.js");
 
 Page({
 
@@ -11,28 +12,16 @@ Page({
   data: {
     picList:[],
     region:[],
-    classList: [
-      {
-      id: 0,
-      name:'类别一'
-      },
-      {
-        id: 1,
-        name: '类别二'
-      }],
-
+    price:'',
+    wokerTypeList: [],
+    isShowNumberModal: false
   },
   chooseImg(){//选择图片
-    let {picList=[]} = this.data;
     wx.chooseImage({
       success:(res)=>{
         const imgSrc = res.tempFilePaths;
-        picList = picList.concat(imgSrc);
-        this.setData({
-          picList
-        });
         const data = { path: imgSrc};
-        // this.uploadimg(data);
+        this.uploadimg(data);
       }
     })
   },
@@ -41,13 +30,20 @@ Page({
     success = data.success ? data.success : 0, 
     fail = data.fail ? data.fail : 0;
     wx.uploadFile({
-      url: '',
+      url: 'http://47.98.53.174:8080/v1/attachment/common/upload',
       filePath: data.path[i],
       name: 'file',
       formData: null,//这里是上传图片时一起上传的数据
       success:(resp)=>{
         success++;
-
+        let { picList = [], attachments=[] } = this.data;
+        let data = JSON.parse(resp.data);
+        picList.push('http://'+data.data.storeUri);
+        attachments.push(data.data);
+        this.setData({
+          picList,
+          attachments
+        });
       },
       fail:(res)=>{
         fail++;
@@ -74,17 +70,94 @@ Page({
     this.setData({
       classvalue: e.detail.value
     })
+    console.log(this.data)
   },
   dateChange(e) {//选择日期
     this.setData({
       datevalue: e.detail.value
     })
   },
+  openNumberModal() {//价格
+    this.setData({
+      isShowNumberModal: true
+    })
+  },
+  closeNumberModal() {//价格
+    this.setData({
+      isShowNumberModal: false
+    })
+  },
+  bindinput(e){
+    let value = e.detail.value;
+    let {name} = e.currentTarget.dataset;
+    this.setData({
+      [name]: value
+    });
+  },
+  savePrice(e){
+    let { priceSource} = this.data;
+    if (priceSource && priceSource !=0){
+      this.setData({
+        price: priceSource,
+        isShowNumberModal: false
+      })
+    }else{
+      tips.show(this,'请输入价格',3000);
+    }
+  },
+  publicSubmit(){
+    wx.showLoading({
+      title: '发布中'
+    })
+    let { subject, content, attachments, region, address, classvalue, wokerTypeList, datevalue, price} = this.data;
+    let data = {
+      userId: wx.getStorageSync('userId'),
+      topic: subject,
+      description: content,
+      attachments,
+      address:{
+        nation:'中国',
+        province: region[0],
+        city: region[1],
+        district: region[2],
+        street: address
+      },
+      typeCode: wokerTypeList[classvalue].code,
+      expireDate: datevalue,
+      price
+    }
+    publicService.api({
+      url: '/v1/order/release',
+      method:'post',
+      data
+    }).then((res) => {
+      wx.hideLoading();
+      if(res.data){
+        tips.show(this, '发布成功', 3000);
+        this.setData({
+          picList: [],
+          region: [],
+          price: '',
+          wokerTypeList: [],
+          subject: '', 
+          content: '', 
+          attachments: [], 
+          address: '',
+          classvalue: '',
+          datevalue: ''
+
+        })
+      }
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    let wokerTypeList = wx.getStorageSync('wokerTypeList');
+    this.setData({
+      wokerTypeList
+    })
   },
 
   /**

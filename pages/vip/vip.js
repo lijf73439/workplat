@@ -17,20 +17,25 @@ Page({
       url: '/pages/vipdetails/vipdetails'
     })
   },
-  goReceiptPlace: function () {
+  goPublicList: function () {
     wx.navigateTo({
-      url: '/pages/deliverPlace/deliverPlace?type=receiveAddress'
+      url: '/pages/vippubliclist/vippubliclist'
     })
   },
-  goDiscount: function () {
+  goFastList: function () {
     wx.navigateTo({
-      url: '/pages/preference/preference'
+      url: '/pages/vipfastlist/vipfastlist'
     })
   },
-  goAbountUS: function () {
-    // wx.navigateTo({
-    //   url: '/pages/abountUS/abountUS'
-    // })
+  goOrderList: function () {
+    wx.navigateTo({
+      url: '/pages/viporderlist/viporderlist'
+    })
+  },
+  goSetting: function () {
+    wx.navigateTo({
+      url: '/pages/setting/setting'
+    })
   },
   goLogin: function(){
     app.loginFrom = 'vip';

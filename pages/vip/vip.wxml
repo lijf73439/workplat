@@ -18,22 +18,19 @@
         <image class='arrow' src='../../icons/icons/youjiantou.png'></image>
       </view>
     </view>
-    <view class='list-item border-none'  bindtap='goOrderList'>
+    <view class='list-item'  bindtap='goFastList'>
       <text class='list-text'>我的抢单</text>
       <view class='float-right'>
         <image class='arrow' src='../../icons/icons/youjiantou.png'></image>
       </view>
     </view>
-  </view>
-  <!-- <view class='list'  wx:if='{{isLogin}}'>
-    <view class='list-item border-none'  bindtap='goDiscount'>
-      <text class='list-text'>我的优惠</text>
+    <view class='list-item border-none'  bindtap='goOrderList'>
+      <text class='list-text'>我的订单</text>
       <view class='float-right'>
-        <text class='right-text'>{{couponsCount}}张</text>
         <image class='arrow' src='../../icons/icons/youjiantou.png'></image>
       </view>
     </view>
-  </view> -->
+  </view>
   <view class='list'>
     <view class='list-item border-none'  bindtap='goSetting'>
       <text class='list-text'>设置</text>

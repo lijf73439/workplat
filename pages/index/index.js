@@ -157,6 +157,23 @@ Page({
       url: path,
     })
   },
+  selectType: function (e) {
+    let {id=''} = e.currentTarget.dataset;
+    console.log(id);
+    this.setData({
+      activeId: id
+    })
+    // this.searchTypeList();
+  },
+  searchTypeList: function () {
+    indexService.searchTypeList({
+      url: ''
+    }).then((res) => {
+      this.setData({
+        orders: res.data
+      })
+    })
+  },
   getBanners: function(){
     indexService.getBannersApi({
       url: '/appversion/getAdPicByType?type=5'
@@ -194,7 +211,8 @@ Page({
     bannerList: [],
     currentCode: '',
     currentPage: '1',
-    orders:[{},{},{}]
+    orders:[{},{},{}],
+    activeId:''
   },
 
   /**
@@ -202,6 +220,10 @@ Page({
    */
   onLoad: function (options) {
     // this.getBanners();
+    let wokerTypeList = wx.getStorageSync('wokerTypeList');
+    this.setData({
+      wokerTypeList
+    })
   },
 
   /**

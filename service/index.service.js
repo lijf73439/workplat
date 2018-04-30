@@ -1,7 +1,6 @@
 let baseService = require("./base.service.js");
 function api({ url, method, params, data }) {
   return baseService.service({
-    apiPrefix: 'MHYQMINIAPP',
     url,
     method,
     params,
@@ -10,7 +9,6 @@ function api({ url, method, params, data }) {
 }
 function getBannersApi({ url, method, params, data }){
   return baseService.service({
-    apiPrefix: 'SWKPAY',
     url,
     method,
     params,
@@ -20,7 +18,6 @@ function getBannersApi({ url, method, params, data }){
 }
 function getProductByShopId({ url, method, params, data }) {
   return baseService.service({
-    apiPrefix: 'MHYQMINIAPP',
     url,
     method,
     params,

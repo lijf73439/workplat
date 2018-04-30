@@ -34,8 +34,11 @@
     "pages/message/message",
     "pages/workersearch/workersearch",
     "pages/workerdetail/workerdetail",
-    "pages/vipdetails/vipdetails"
-    
+    "pages/vipdetails/vipdetails",
+    "pages/vippubliclist/vippubliclist",
+    "pages/vipfastlist/vipfastlist",
+    "pages/viporderlist/viporderlist",
+    "pages/setting/setting"
   ],
   "window": {
     "enablePullDownRefresh": true,

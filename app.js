@@ -46,6 +46,9 @@ App({
     }else{
       login.login(this);
     }
+    configService.getWorkerType().then((res) => {
+      wx.setStorageSync('wokerTypeList', res.data);
+    });
   }
 
 })

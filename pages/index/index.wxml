@@ -51,14 +51,8 @@
   </view>
   <view class='index-bd' wx:if='{{isOpenLocaltion}}'>
     <scroll-view scroll-x scroll-with-animation class='list-box'>
-      <view class='list-item active'>全部</view>
-      <view class='list-item'>种类一</view>
-      <view class='list-item'>种类二</view>
-      <view class='list-item'>种类三</view>
-      <view class='list-item'>种类四</view>
-      <view class='list-item'>种类五</view>
-      <view class='list-item'>种类六</view>
-      <view class='list-item'>种类七</view>
+      <view class='list-item {{activeId==""?"active":""}}' bindtap='selectType' data-id=''>全部</view>
+      <view class='list-item {{activeId==item.id?"active":""}}' wx:for='{{wokerTypeList}}' bindtap='selectType' data-id='{{item.id}}'>{{item.name}}</view>
     </scroll-view>
     <scroll-view scroll-y style="height:{{windowHeight-100+'px'}}" bindscrolltolower='loadMore' bindscrolltoupper="refresh">
       <template is="order"  data="{{order:item}}" wx:for="{{orders}}"/>
